@@ -1,0 +1,280 @@
+/**
+*  Publish Foundation theme
+*  Copyright (c) John Sundell 2019
+*  MIT license, see LICENSE file for details
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    background-color: black;
+    color: #000;
+    font-family: Helvetica, Arial;
+    text-align: center;
+}
+
+.div-background {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: url("/images/aquarium.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;s
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: black;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    z-index: 0;
+    display: block;
+}
+
+.div-home {
+    position: relative;
+    z-index: 1;
+}
+
+.content {
+    scroll-behavior: auto;
+    position: relative ;
+    left: 20px;
+    right: 20px;
+    padding-top: 5%;
+    z-index = 1;
+    margin-bottom: 40px;
+}
+
+.wrapper {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    text-align: left;
+    z-index: 1;
+}
+
+.tracer-card {
+    text-align: center;
+    padding: 75px;
+}
+
+.img-avatar {
+    vertical-align: middle;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.katakanaFont {
+    font-family: 'Kosugi Maru', sans-serif;
+    color: white;
+    
+}
+
+.blackLine {
+    height: 2px;
+    width: 100%;
+    vertical-align: middle;
+    background-color: black;
+    overflow: hidden;
+    margin-top: 10px ;
+    margin-bottom: 10px
+    
+}
+
+header {
+    background-color: #eee;
+    z-index: 1;
+}
+
+header .wrapper {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header .site-name {
+    font-size: 1.5em;
+    color: #000;
+    font-weight: bold;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 7px;
+    line-height: 1.5em;
+}
+
+nav li a.selected {
+    text-decoration: underline;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+a {
+    color: inherit;
+}
+
+.description {
+    margin-bottom: 40px;
+}
+
+.item-list > li {
+    display: block;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.item-list li {
+    background-color:blue;
+}
+
+.item-list > li:last-child {
+    margin-bottom: 0;
+}
+
+.item-list h1 {
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.item-list p {
+    margin-bottom: 0;
+}
+
+.tag-list {
+    margin-bottom: 15px;
+}
+
+.tag-list li,
+.tag {
+    display: inline-block;
+    background-color: #000;
+    color: #ddd;
+    padding: 4px 6px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.tag-list a,
+.tag a {
+    text-decoration: none;
+}
+
+.item-page .tag-list {
+    display: inline-block;
+}
+
+.browse-all {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.all-tags li {
+    font-size: 1.4em;
+    margin-right: 10px;
+    padding: 6px 10px;
+}
+
+.t-navbar {
+    z-index: 2;
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+.header-menu {
+    margin: 15px;
+    display: block;
+    text-decoration: none;
+    white-space: wrap;
+    background-color: transparent;
+}
+
+.tracer-heading:hover {
+    padding: .5em 1em;
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    
+}
+
+
+footer {
+    text-align: center;
+    color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #222;
+    }
+
+    body,
+    header .site-name {
+        color: #ddd;
+    }
+
+    .item-list > li {
+        background-color: rgba(52, 55, 61, 0.5);
+    }
+    
+
+    header {
+        background-color: #000;
+    }
+}
+
+@media(max-width: 600px) {
+    .wrapper {
+        padding: 40px 20px;
+    }
+}
+
+.blog-list li {
+    display: block;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-color:#3388b0;
+}
+
+.sidebar {
+    margin-top: 25px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
