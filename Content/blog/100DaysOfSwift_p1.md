@@ -1,41 +1,64 @@
+---
+date: 2022-01-17 12:06
+tags: Publish, Web, Swift
+excerpt: My first review day of Swift UI, im studying using the 100 days of swiftUI course.
+title: SwiftUI: Basic app structure
+---
 
 # SwiftUI: Basic app structure
 
 ## Project Navigator Structure
 
 Inside Xcode we should see the following file in the space on the left (Project Navigator):
-- **AppName.swift:** contains code for launching your app. If you create something when the app launches and keep it alive the entire time, you'll put it here
+
+- **AppName.swift:** contains code for launching your app. If you create something when the app launches and keep it alive the entire time, you'll put it here.
+
 - **contentView.swift** contains the initial user interface (UI) for the program, and is  where we'll be doing all the work in this project.
+
 - **assets.xcassets** the asset catalog, a collection of pictures that you want to use in your app. You can also add colors here, along with app icons. iMessage stickers, and more.
+
 - **Preview Content** is a group , with Preview Assets.xcassets inside - tihs is another ssset catalog, this time specifically for example images you want to use when your're designing your user interfaces, to give you an idea of how they might look when the program is running.
 
 ## Important First steps
+
 - **import SwiftUI:** imports the SwiftUI framework
 - **struct ContentView:** View new struct called ContentView, conforming to View protocol.
+    
     - The **'View'** comes from SwiftUI, and is the protocol that must be adopted by anything you wnat to draw on the screen. (text, buttons, images)
-- **var body:** some View, the type 'some View' means something conforming to the View protocol will be returned (our layout)
+    
+- **var body:** some View, the type 'some View' means something conforming to the View protocol will be returned (our layout)    
+    
+    
+## The view protocol
 
-### The view protocol
 This protocol has only one requirement: to have a computed property called  body that returns 'some View'
 
 ### Modifiers
+
 **padding()** method called on the text view, is and example of modifiers, which are regular methods with one small difference...     
 
 		 They always return a new view that contains both
 		 your original data, plus the extra
 		 modification you asked for.  
-
+         
 ## The Canvas
+
 Automatically preview using one specific Apple device.
+
 To change, look at the top center of your Xcode window for the current device, then click on it and select an alternative. This will also affect how your code is run in the virtual iOS simulator later on.
 
 ### Resume Automatic preview:
-``` Option + Cmd + P``` - Resume automatic preview.
+
+``` Option + Cmd + P``` 
+
+- Resume automatic preview.
 
 ## Creating a form
+
 Forms are scroling lists of static controls like text and images, but can also include user interactive controls like text fields, toggle switches, buttons and more.
 
 To create a basic form:
+
 ```
 var body: some View {
     Form {
@@ -148,7 +171,9 @@ struct ContentView: View {
 ```
 
 ## Views in a loop
+
 ### The forEach view:
+
 This SwfitUI view can loop over arrays and ranges, creating as many views as needed. Even better, this view doesn't get git by the 10-view limit.
 
 ForEeach runs a closure once for every item it loops over, passing in the current loop item.
@@ -169,7 +194,9 @@ For example, this creates a form with 100 rows:
   }
 
 ```
+
 ### Use case
+
 ForEach is particularly useful when working with SwiftUI’s Picker view,
 Example define a view that:
 
@@ -196,4 +223,5 @@ struct ContentView: View {
     }
 }
 ```
+
 - **note:**  *id: \.self* part is important. This exists because SwiftUI needs to be able to identify every view on the screen uniquely, so it can detect when things change. 
